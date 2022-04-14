@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import JSRP from "json-schema-ref-parser";
+import { dereference } from "./utils/nest_ref_parser"
 
 Vue.use(Vuex);
 
@@ -141,9 +142,11 @@ export default new Vuex.Store({
         state.apis[payload.apiId].openrpc.document.modified.schema =
           payload.json;
       }
+
       // JSON deep copy fuckery to prevent deref referencing payload.json (we don't want the deref going back to schema)
-      JSRP.dereference(
-        JSON.parse(JSON.stringify(payload.json)),
+      var copyPayload = JSON.parse(JSON.stringify(payload.json))
+
+      dereference(copyPayload,
         (err, deref) => {
           if (err) {
             state.errors.push(err);
@@ -167,9 +170,12 @@ export default new Vuex.Store({
     setOpenRpcModified(state, payload) {
       state.apis[payload.apiId].openrpc.document.modified.schema = payload.json;
       state.apis[payload.apiId].openrpc.error = false; // reset error
+
       // JSON deep copy fuckery to prevent deref referencing payload.json (we don't want the deref going back to schema)
-      JSRP.dereference(
-        JSON.parse(JSON.stringify(payload.json)),
+      var copyPayload = JSON.parse(JSON.stringify(payload.json))
+
+      dereference(
+        copyPayload,
         (err, deref) => {
           if (err) {
             state.errors.push(err);
