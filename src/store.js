@@ -55,7 +55,7 @@ export default new Vuex.Store({
           to: "/chain",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/chain.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/chain.json",
           title: "Starcoin Chain API",
           desc: "Starcoin Chain API Documents",
           url: "https://main-seed.starcoin.org"
@@ -67,7 +67,7 @@ export default new Vuex.Store({
           to: "/contract_api",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/contract_api.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/contract_api.json",
           title: "Starcoin Contract API",
           desc: "Starcoin Contract API Documents",
           url: "https://main-seed.starcoin.org"
@@ -79,7 +79,7 @@ export default new Vuex.Store({
           to: "/state",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/state.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/state.json",
           title: "Starcoin State API",
           desc: "Starcoin State API Documents",
           url: "https://main-seed.starcoin.org"
@@ -91,7 +91,7 @@ export default new Vuex.Store({
           to: "/txpool",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/txpool.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/txpool.json",
           title: "Starcoin Txpool API",
           desc: "Starcoin Txpool API Documents",
           url: "https://main-seed.starcoin.org"
@@ -103,7 +103,7 @@ export default new Vuex.Store({
           to: "/node",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/node.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/node.json",
           title: "Starcoin Node API",
           desc: "Starcoin Node API Documents",
           url: "https://main-seed.starcoin.org"
@@ -115,7 +115,7 @@ export default new Vuex.Store({
           to: "/account",
           icon: "apis/stc.svg",
           json:
-            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/generated_rpc_schema/account.json",
+            "https://raw.githubusercontent.com/starcoinorg/starcoin/master/rpc/api/generated_rpc_schema/account.json",
           title: "Starcoin Account API",
           desc: "Starcoin Account API Documents",
           url: "https://main-seed.starcoin.org"
