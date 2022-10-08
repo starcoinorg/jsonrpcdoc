@@ -30,10 +30,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: install dependencies
+        id: install
         run: npm install
-      - name: Deploy 🚀
+      - name: install dependencies
+        id: build
+        run: npm run build
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist # The folder the action should deploy.
