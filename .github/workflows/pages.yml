@@ -34,7 +34,7 @@ jobs:
       - name: install dependencies
         id: install
         run: npm install
-      - name: install dependencies
+      - name: build
         id: build
         run: npm run build
       - name: Deploy to GitHub Pages
