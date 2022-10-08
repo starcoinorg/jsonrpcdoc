@@ -32,4 +32,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Deploy to GitHub Pages
         id: deployment
-        run: npm install && bash ./deploy.sh
+        run: npm install
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # The folder the action should deploy.
+
